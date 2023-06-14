@@ -1,5 +1,7 @@
 # PortfolioApp
 
+This Project displays mock portfolios of stocks, and real time stock data from IEX. It connects to rest services and a websocket in [this java server](https://github.com/andrepimenta10/PortfolioApp). 
+ 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
 
 ## Development server

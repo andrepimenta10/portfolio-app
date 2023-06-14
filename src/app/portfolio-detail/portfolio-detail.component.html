@@ -1,0 +1,15 @@
+<mat-card class="gridContainer">
+  <mat-card-title>Portfolio {{selectedPortfolio}} Holdings</mat-card-title>
+  <mat-card-content>
+    <div *ngIf="showGrid">
+      <ag-grid-angular
+        style="width: 95vw; height: 80vh;"
+        class="ag-theme-alpine"
+        [rowData]="rowData"
+        [columnDefs]="columnDefs"
+        [gridOptions]="gridOptions"
+        (gridReady)="onGridReady($event)"
+      ></ag-grid-angular>
+    </div>
+  </mat-card-content>
+</mat-card>

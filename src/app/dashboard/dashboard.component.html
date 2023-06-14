@@ -1,0 +1,13 @@
+<mat-card class="gridContainer">
+  <mat-card-title>All Portfolios</mat-card-title>
+  <mat-card-content>
+    <ag-grid-angular
+      (gridReady)="onGridReady($event)"
+      [columnDefs]="columnDefs"
+      [gridOptions]="gridOptions"
+      [rowData]="rowData"
+      class="ag-theme-alpine"
+      style="width: 95vw; height: 80vh;"
+    ></ag-grid-angular>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,27 @@
+<form class="form">
+  <mat-form-field class="full-width">
+    <mat-label>Security Search</mat-label>
+    <input type="text"
+           placeholder="Search"
+           aria-label="Stock"
+           matInput
+           [formControl]="myControl"
+           [matAutocomplete]="auto">
+    <mat-autocomplete
+      #auto="matAutocomplete"
+      (optionSelected)='selectOption($event)'>
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
+
+
+<mat-grid-list cols="4" rowHeight="600">
+  <div *ngFor="let security of selectedSecurities">
+    <mat-grid-tile>
+      <security-card [selectedSecurity]="security"></security-card>
+    </mat-grid-tile>
+  </div>
+</mat-grid-list>
